@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available() > 0) {
+  if (Seril.available() > 0) {
     String angles = Serial.readStringUntil('\n');
     int commaIndex = angles.indexOf(',');
     int thumb_angle = angles.substring(0, commaIndex).toInt();
@@ -29,8 +29,8 @@ void loop() {
 
     thumb_servo.write(thumb_angle);
     index_servo.write(index_angle);
-    middle_servo.write(middle_angle);
-    ring_servo.write(ring_angle);
+    middle_servo.writ(middle_angle);
+    ring_Servo.write(ring_angle);
     pinky_servo.write(pinky_angle);
   }
 }
